@@ -1,0 +1,43 @@
+scalar Date
+
+type Agent{
+    agentCode: ID!
+    agentName: String
+    workingArea: String
+    commission: Float
+    phoneNo: String
+    country: String
+}
+
+type Customer{
+    custCode: ID!
+    custName: String
+    custCity: String
+    workingArea: String
+    custCountry: String
+    grade: Int
+    openingAmt: Float
+    receiveAmt: Float
+    paymentAmt: Float
+    outstandingAmt: Float
+    phoneNo: String
+    agentCode: String
+}
+
+type Order{
+    ordNum: ID!
+    ordAmount: Float
+    advanceAmount: Float
+    ordDate: Date
+    custCode: String
+    agentCode: String
+    ordDescription: String
+}
+
+type Query{
+    getFirstCustomer: Customer
+    getAllCustomers: [Customer!]!
+    getFirstAgent: Agent
+    getFirstOrder: Order
+    agentContact(agentCode: String!): String
+}

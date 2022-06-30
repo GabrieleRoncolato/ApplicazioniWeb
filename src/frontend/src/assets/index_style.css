@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Stolzl", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(12, 18, 43, 0.521), rgba(17, 24, 49, 0.541)), url(img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+    width: 100%;
+}
+
+
+/* Reserve the same height at the top of the page as the header min-height */
+
+html:not([data-scroll='0']) header {
+    padding-top: 3em;
+}
+
+
+/* Switch to fixed positioning, and stick the header to the top of the page */
+
+html:not([data-scroll='0']) .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    transition: 0.5s;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+html:not([data-scroll='0']) .navbar a img {
+    filter: none;
+}
+
+html:not([data-scroll='0']) .navbar ul li a {
+    color: black;
+}
+
+html:not([data-scroll='0']) #contact-link {
+    border-color: black;
+}
+
+#logo {
+    margin-left: calc(10%);
+}
+
+.navbar a img {
+    filter: invert(100%);
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline;
+    padding-inline: 15px;
+}
+
+.right-nav {
+    margin-right: calc(10% - 15px);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    color: #c36b3d;
+}
+
+#contact-link {
+    border: 1px solid #fff;
+    padding: 7px 11px;
+    background: transparent;
+}
+
+#contact-link:hover {
+    color: #fff;
+    background-color: #c36b3d;
+}
+
+.front-text {
+    min-width: 410px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    color: #fff;
+}
+
+.front-text h1 {
+    font-size: 50px;
+}
+
+.front-text p {
+    margin: 10px 0 40px;
+    font-size: 24px;
+}
+
+.contact-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #c36b3d;
+}
+
+
+/*about-us*/
+
+.about-us {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-us img {
+    max-width: 550px;
+    max-height: 830px;
+}
+
+.about-text {
+    padding-left: -200px;
+    max-width: 610px;
+}
