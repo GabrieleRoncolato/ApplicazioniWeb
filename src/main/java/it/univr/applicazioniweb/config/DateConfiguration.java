@@ -10,7 +10,7 @@ import org.springframework.graphql.execution.RuntimeWiringConfigurer;
 public class DateConfiguration {
     @Bean
     RuntimeWiringConfigurer configurer() {
-        GraphQLScalarType scalarType = ExtendedScalars.Date;
+        GraphQLScalarType scalarType = ExtendedScalars.DateTime;
         return (builder) -> builder.scalar(scalarType);
     }
 }
